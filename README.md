@@ -4,9 +4,11 @@
 > 呃，这是我们学校的网络登录系统，如果别的学校也是同样的系统，你也可以试试，但我不保证都可以执行，我只对我的学校进行了本地测试
 ## 实现功能
 ### 1. 对账号密码的自动保存及自动登录
-![自动登录](https://github.com/suhexia/GlutnnLogin/assets/55019115/1db12e94-d1e3-4627-8c5a-7832b09055db)
+![保存账户](https://github.com/suhexia/GlutnnLogin/assets/55019115/fd84d7cc-97c7-4362-8be8-d964fe9a6ff4)
+
 ### 2. 自动检测错误类型，并给予提示
-![检测错误](https://github.com/suhexia/GlutnnLogin/assets/55019115/b43ae087-3fd6-426d-b278-67606d7810d8)
+![检测错误](https://github.com/suhexia/GlutnnLogin/assets/55019115/688faa0b-11ad-4aad-b5ac-56c0bf0f69d2)
+
 ### 3. 自动识别验证码，并更正错误的和难以识别的验证码（上图有）
 ### 4. 登录成功智能反馈
 ![登录成功](https://github.com/suhexia/GlutnnLogin/assets/55019115/e0da1613-38ea-49b8-b364-7e832862fa25)
