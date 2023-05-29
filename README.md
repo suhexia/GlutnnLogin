@@ -11,8 +11,8 @@
 
 ### 3. 自动识别验证码，并更正错误的和难以识别的验证码（上图有）
 
-## 4. 登录成功智能反馈
-#![登录成功](https://github.com/suhexia/GlutnnLogin/assets/55019115/7a907045-5aeb-4fc9-bc71-dcafc37e2712)
+### 4. 登录成功智能反馈
+![登录成功](https://github.com/suhexia/GlutnnLogin/assets/55019115/7a907045-5aeb-4fc9-bc71-dcafc37e2712)
 
 ## 开发中功能
 - 自动检测网络状态，在网络需要登录时自动更新
