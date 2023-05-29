@@ -1,5 +1,6 @@
 # Glutnn—联通校园网自动登录
-![网络登录界面](https://github.com/suhexia/GlutnnLogin/assets/55019115/446ecd84-8c16-47e5-97ab-e817ae96b660)
+![网络登录](https://github.com/suhexia/GlutnnLogin/assets/55019115/bd5b5764-be65-43ff-9f9a-4cdf00df1543)
+
 > 呃，这是我们学校的网络登录系统，如果别的学校也是同样的系统，你也可以试试，但我不保证都可以执行，我只对我的学校进行了本地测试
 ## 实现功能
 ### 1. 对账号密码的自动保存及自动登录
