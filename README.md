@@ -5,8 +5,9 @@
 
 ## 安装方法
  1. GitHub release：[GitHub](https://github.com/suhexia/GlutnnLogin/releases)
- 2. 阿里云盘：[阿里云盘](https://www.aliyundrive.com/s/AyZBaHmsR7U)  提取码：43ko
+ 2. 阿里云盘：[阿里云盘](https://www.aliyundrive.com/s/d8FqDZb3i8A)  提取码：z66r
  3. 百度云盘：还没上传，过段时间吧
+ 
 ## 实现功能
 ### 1. 对账号密码的自动保存及自动登录
 ![保存账户](https://github.com/suhexia/GlutnnLogin/assets/55019115/fd84d7cc-97c7-4362-8be8-d964fe9a6ff4)
@@ -22,7 +23,12 @@
 ## 开发中功能
 - 自动检测网络状态，在网络需要登录时自动更新
 - 开机后台自启动，保持服务状态
+- 管理员权限自动获取，避免c盘无权限情况
 
+## 关于Windows权限异常
+	**这个目前还没找到很好的解决方案，可以在程序-属性-兼容性-以管理员身份运行**
+	**详细的可以看[设置管理员权限](https://zhuanlan.zhihu.com/p/135435104)的03 快捷方式属性[兼容性设置]这块**
+	
 ## 注意事项
  - **本项目开发者始终只有禾和**
  - **项目免费开放使用，可以分享，严禁售卖**
