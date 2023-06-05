@@ -35,6 +35,8 @@
 - **详细的可以看[设置管理员权限](https://zhuanlan.zhihu.com/p/135435104)的【03-快捷方式属性-兼容性设置]】这块**
 	
 ## 注意事项
- - **本项目开发者始终只有禾和**
  - **项目免费开放使用，可以分享，严禁售卖**
  - **项目使用的登录方法与正常登录一致，经本人及宿舍测试了半个月后均无异常，安全性可以保证**
+
+## 贡献者
+<img src="https://avatars.githubusercontent.com/u/55019115?v=4" height=50px width=50px style="border-radius: 20px;"/>
