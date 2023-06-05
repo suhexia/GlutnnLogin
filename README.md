@@ -38,5 +38,7 @@
  - **项目免费开放使用，可以分享，严禁售卖**
  - **项目使用的登录方法与正常登录一致，经本人及宿舍测试了半个月后均无异常，安全性可以保证**
 
-## 贡献者
-<img src="https://avatars.githubusercontent.com/u/55019115?v=4" height=50px width=50px style="border-radius: 20px;"/>
+## 开发者&贡献
+<a href="https://github.com/suhexia/GlutnnLogin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=suhexia/GlutnnLogin" />
+</a>
