@@ -1,4 +1,5 @@
 from requests import Session
+from requests.exceptions import ConnectTimeout
 from textwrap import dedent
 import robobrowser
 from datetime import datetime
@@ -57,7 +58,12 @@ class WebsiteLogin:
     def submitForm(self):  # sourcery skip: extract-method
         self.infoGet()
         b = robobrowser.RoboBrowser(parser="lxml", session=self.session)
-        b.open("http://221.7.244.134:8080/login_gx.jsp")
+        while True:
+            try:
+                b.open("http://221.7.244.134:8080/login_gx.jsp",timeout=5)
+                break
+            except ConnectTimeout:
+                print("连接异常，正在尝试重新连接，按ctrl+c结束")
         # b.open("http://119.91.228.94/hexia/")
         form = b.get_form(action="/login.do")
         if form is not None:
