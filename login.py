@@ -11,6 +11,7 @@ from json import dumps,loads
 from re import sub
 from time import sleep
 
+import ctypes, sys
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48",
@@ -37,7 +38,9 @@ class WebsiteLogin:
                     wf.write(dumps({
                         "userId": str(userName),
                         "passwd": str(passwd)
-                    }))
+                    },
+                    indent= 4
+                ))
         
         with open("info.json", "r")as rf:
             info = loads(rf.read())
@@ -81,11 +84,22 @@ class WebsiteLogin:
             textGet = sub(r"alert|\(\"|\"\)", "", err)
             return {"status":"faild","message":textGet}
         return {"status":"success","message":"登录成功"}
+    
+    def is_admin(self):
+        try:
+            return ctypes.windll.shell32.IsUserAnAdmin()
+        except:
+            return False
 
 
 if __name__ == "__main__":
+    if not WebsiteLogin().is_admin():
+    # 如果非管理员，则用管理员权限重新启动该脚本
+        hinstance = ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
+        exit(0)
+
     started = WebsiteLogin()
-    status = started.AfterSubmit()
+    status = started.AfterSubmit() 
     while status["status"] == "faild":
         rtext = status["message"]
         if "验证码" in rtext:
