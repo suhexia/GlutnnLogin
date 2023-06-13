@@ -31,7 +31,7 @@
 - 管理员权限自动获取，避免c盘无权限情况
 
 ## 关于Windows权限异常
-- **这个目前还没找到很好的解决方案，可以在程序-属性-兼容性-以管理员身份运行**
+- **~~这个目前还没找到很好的解决方案，可以在程序-属性-兼容性-以管理员身份运行**~~（在ver1.0.3更新了权限检测）
 - **详细的可以看[设置管理员权限](https://zhuanlan.zhihu.com/p/135435104)的【03-快捷方式属性-兼容性设置]】这块**
 	
 ## 注意事项
@@ -40,5 +40,5 @@
 
 ## 开发者&贡献
 <a href="https://github.com/suhexia/GlutnnLogin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=suhexia/GlutnnLogin" />
+  <img src="https://contrib.rocks/image?repo=suhexia/GlutnnLogin" height='100px' width='100px'/>
 </a>
