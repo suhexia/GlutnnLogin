@@ -8,6 +8,7 @@
  2. 阿里云盘：[阿里云盘](https://www.aliyundrive.com/s/d8FqDZb3i8A)  提取码：z66r
  3. 百度云盘：[百度网盘](https://pan.baidu.com/s/1nl4goIG-DFF_oMxM1aP4mg?pwd=vmn2)   提取码：vmn2
  > ***安装最好别选c盘，如果你只有c盘的话你得看看下面的【关于Windows权限异常】这块的内容***
+ > ***建议从release里下载，有时候可能小更新有点多不一定会同步在阿里云盘和百度云盘*** 
  
 ## 实现功能
 ### 1. 对账号密码的自动保存及自动登录
