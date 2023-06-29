@@ -88,7 +88,7 @@ class WebsiteLogin:
     def is_admin(self):
         try:
             return ctypes.windll.shell32.IsUserAnAdmin()
-        except:
+        except Exception:
             return False
 
 
@@ -97,31 +97,35 @@ if __name__ == "__main__":
     # 如果非管理员，则用管理员权限重新启动该脚本
         hinstance = ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
         exit(0)
-
-    started = WebsiteLogin()
-    status = started.AfterSubmit() 
-    while status["status"] == "faild":
-        rtext = status["message"]
-        if "验证码" in rtext:
-            print("验证码错误，正在重新尝试...\n")
-            status = started.AfterSubmit()
-            sleep(1)
-        elif "密码或开户地有误" in rtext:
-            print("您输入的帐号,密码或开户地有误,请重新输入\n" 
-                  "出现此错误的原因可能有:\n"
-                  "1.你输入的账号密码确实出了问题\n"
-                  "（会改json的自己改【info.json】不会改json的就删掉【info.json】重新运行软件）\n"
-                  "2.你的校园网网络已经登录完成，无需重复登录")
-            break
-        else:
-            print(rtext)
-            break
-    if status["status"] == "success":
-        rtInfo = f"""
-            登录成功！
-            用户名：{started.bpssUSERNAME}
-            登录ip：{started.GetLocalIp()}
-            登录时间：{started.nowTime}
-            """
-        print(dedent(rtInfo))
-    system("pause")
+    try:
+        started = WebsiteLogin()
+        status = started.AfterSubmit() 
+        while status["status"] == "faild":
+            rtext = status["message"]
+            if "验证码" in rtext:
+                print("验证码错误，正在重新尝试...\n")
+                status = started.AfterSubmit()
+                sleep(1)
+            elif "密码或开户地有误" in rtext:
+                print("您输入的帐号,密码或开户地有误,请重新输入\n" 
+                    "出现此错误的原因可能有:\n"
+                    "1.你输入的账号密码确实出了问题\n"
+                    "（会改json的自己改【info.json】不会改json的就删掉【info.json】重新运行软件）\n"
+                    "2.你的校园网网络已经登录完成，无需重复登录")
+                break
+            else:
+                print(rtext)
+                break
+        if status["status"] == "success":
+            rtInfo = f"""
+                登录成功！
+                用户名：{started.bpssUSERNAME}
+                登录ip：{started.GetLocalIp()}
+                登录时间：{started.nowTime}
+                """
+            print(dedent(rtInfo))
+        system("pause")
+    except Exception as e:
+        print("出现了一些异常，请尝试重新运行该软件，如果频繁出现此异常，请联系我或在GitHub提上你的issue\nQQ：3134303511，并保留好你的异常截图，")
+        print(repr(e))
+        system("pause")
